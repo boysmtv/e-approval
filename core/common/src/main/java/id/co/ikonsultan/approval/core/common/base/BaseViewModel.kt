@@ -10,9 +10,6 @@ package id.co.ikonsultan.approval.core.common.base
 
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
-import id.co.ikonsultan.approval.core.common.contract.UiEffect
-import id.co.ikonsultan.approval.core.common.contract.UiEvent
-import id.co.ikonsultan.approval.core.common.contract.UiState
 import id.co.ikonsultan.approval.core.common.coroutine.DispatcherProvider
 import kotlinx.coroutines.channels.Channel
 import kotlinx.coroutines.flow.MutableSharedFlow

@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -10,7 +12,7 @@ plugins {
 }
 
 android {
-    namespace = "id.co.ikonsultan.approval.core.ui"
+    namespace = "id.co.ikonsultan.approval.core.navigation"
     compileSdk {
         version = release(36)
     }
@@ -35,7 +37,7 @@ android {
 
     kotlin {
         compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+            jvmTarget.set(JvmTarget.JVM_11)
         }
     }
 }
@@ -127,9 +129,5 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
-
-    implementation(libs.androidx.navigation.fragment)
-    implementation("androidx.navigation:navigation-ui-ktx:2.9.7")
-    implementation("androidx.fragment:fragment-ktx:1.8.9")
 
 }

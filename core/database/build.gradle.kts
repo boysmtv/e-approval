@@ -11,7 +11,6 @@ plugins {
 
 android {
     namespace = "id.co.ikonsultan.approval.core.database"
-    namespace = "com.mtv.app.shopme.domain"
     compileSdk {
         version = release(36)
     }

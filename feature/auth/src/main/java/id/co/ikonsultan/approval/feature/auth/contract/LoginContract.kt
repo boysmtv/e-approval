@@ -6,7 +6,11 @@
  * Last modified by Dedy Wijaya on 23/02/26 15.31
  */
 
-package id.co.ikonsultan.approval.core.common.contract
+package id.co.ikonsultan.approval.feature.auth.contract
+
+import id.co.ikonsultan.approval.core.common.base.UiEffect
+import id.co.ikonsultan.approval.core.common.base.UiEvent
+import id.co.ikonsultan.approval.core.common.base.UiState
 
 data class LoginState(
     val email: String = "",

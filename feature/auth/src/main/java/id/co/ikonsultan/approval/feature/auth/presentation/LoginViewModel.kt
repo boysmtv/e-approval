@@ -2,9 +2,9 @@ package id.co.ikonsultan.approval.feature.auth.presentation
 
 import dagger.hilt.android.lifecycle.HiltViewModel
 import id.co.ikonsultan.approval.core.common.base.BaseViewModel
-import id.co.ikonsultan.approval.core.common.contract.LoginEffect
-import id.co.ikonsultan.approval.core.common.contract.LoginEvent
-import id.co.ikonsultan.approval.core.common.contract.LoginState
+import id.co.ikonsultan.approval.feature.auth.contract.LoginEffect
+import id.co.ikonsultan.approval.feature.auth.contract.LoginEvent
+import id.co.ikonsultan.approval.feature.auth.contract.LoginState
 import id.co.ikonsultan.approval.core.common.coroutine.DispatcherProvider
 import javax.inject.Inject
 import kotlinx.coroutines.delay

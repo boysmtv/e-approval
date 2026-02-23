@@ -15,9 +15,6 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
-import id.co.ikonsultan.approval.core.common.contract.UiEffect
-import id.co.ikonsultan.approval.core.common.contract.UiEvent
-import id.co.ikonsultan.approval.core.common.contract.UiState
 import kotlinx.coroutines.launch
 
 abstract class BaseFragment<

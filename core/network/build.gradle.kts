@@ -1,3 +1,5 @@
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
+
 plugins {
     alias(libs.plugins.android.library)
     alias(libs.plugins.kotlin.android)
@@ -11,7 +13,6 @@ plugins {
 
 android {
     namespace = "id.co.ikonsultan.approval.core.network"
-    namespace = "com.mtv.app.shopme.domain"
     compileSdk {
         version = release(36)
     }
@@ -36,7 +37,7 @@ android {
 
     kotlin {
         compilerOptions {
-            jvmTarget.set(org.jetbrains.kotlin.gradle.dsl.JvmTarget.JVM_11)
+            jvmTarget.set(JvmTarget.JVM_11)
         }
     }
 }

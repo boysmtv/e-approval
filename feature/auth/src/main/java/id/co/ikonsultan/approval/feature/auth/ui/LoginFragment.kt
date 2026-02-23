@@ -14,9 +14,9 @@ import androidx.core.widget.addTextChangedListener
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import id.co.ikonsultan.approval.core.common.base.BaseFragment
-import id.co.ikonsultan.approval.core.common.contract.LoginEffect
-import id.co.ikonsultan.approval.core.common.contract.LoginEvent
-import id.co.ikonsultan.approval.core.common.contract.LoginState
+import id.co.ikonsultan.approval.feature.auth.contract.LoginEffect
+import id.co.ikonsultan.approval.feature.auth.contract.LoginEvent
+import id.co.ikonsultan.approval.feature.auth.contract.LoginState
 import id.co.ikonsultan.approval.core.common.navigation.AppNavigator
 import id.co.ikonsultan.approval.feature.auth.R
 import id.co.ikonsultan.approval.feature.auth.databinding.FragmentLoginBinding
