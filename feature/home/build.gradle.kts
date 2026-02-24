@@ -99,6 +99,7 @@ dependencies {
      * ========================= */
     implementation(libs.hilt.android)
     implementation(libs.androidx.compose.foundation)
+    implementation(libs.material)
     ksp(libs.hilt.compiler)
     implementation(libs.hilt.navigation.compose)
 
