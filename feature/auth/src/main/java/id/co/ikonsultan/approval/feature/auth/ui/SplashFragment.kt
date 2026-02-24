@@ -1,5 +1,5 @@
 /*
- * Project: Shopme App
+ * Project: E-Approval
  * Author: Boys.mtv@gmail.com
  * File: SplashFragment.kt
  *
@@ -9,28 +9,41 @@
 package id.co.ikonsultan.approval.feature.auth.ui
 
 import android.view.View
+import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import id.co.ikonsultan.approval.core.common.base.BaseFragment
+import id.co.ikonsultan.approval.core.common.navigation.AppNavigator
 import id.co.ikonsultan.approval.feature.auth.R
-import id.co.ikonsultan.approval.feature.auth.contract.LoginEffect
-import id.co.ikonsultan.approval.feature.auth.contract.LoginEvent
-import id.co.ikonsultan.approval.feature.auth.contract.LoginState
-import id.co.ikonsultan.approval.feature.auth.databinding.FragmentLoginBinding
-import id.co.ikonsultan.approval.feature.auth.presentation.LoginViewModel
+import id.co.ikonsultan.approval.feature.auth.contract.SplashEffect
+import id.co.ikonsultan.approval.feature.auth.contract.SplashEvent
+import id.co.ikonsultan.approval.feature.auth.contract.SplashState
+import id.co.ikonsultan.approval.feature.auth.databinding.FragmentSplashBinding
+import id.co.ikonsultan.approval.feature.auth.presentation.SplashViewModel
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class SplashFragment :
-    BaseFragment<FragmentLoginBinding, LoginState, LoginEvent, LoginEffect, LoginViewModel>(R.layout.fragment_login) {
+    BaseFragment<FragmentSplashBinding, SplashState, SplashEvent, SplashEffect, SplashViewModel>(R.layout.fragment_splash) {
 
-    override val viewModel: LoginViewModel
-        get() = TODO("Not yet implemented")
+    override val viewModel: SplashViewModel by viewModels()
 
-    override fun bindView(view: View): FragmentLoginBinding {
-        TODO("Not yet implemented")
+    @Inject
+    lateinit var navigator: AppNavigator
+
+    override fun bindView(view: View) =
+        FragmentSplashBinding.bind(view)
+
+    override fun setupView() {
+        viewModel.sendEvent(SplashEvent.CheckSession)
     }
 
-    override fun renderState(state: LoginState) {
-        TODO("Not yet implemented")
+    override fun renderState(state: SplashState) {
+        // optional loading UI
     }
 
+    override fun handleEffect(effect: SplashEffect) {
+        when (effect) {
+            SplashEffect.NavigateLogin -> navigator.openLogin()
+        }
+    }
 }

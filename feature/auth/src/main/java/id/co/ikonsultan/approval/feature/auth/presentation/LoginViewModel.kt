@@ -42,7 +42,7 @@ class LoginViewModel @Inject constructor(
                         }
                     }
 
-                    LoginEvent.OnLoginClicked -> login()
+                    is LoginEvent.OnLoginClicked -> login()
                 }
             }
         }

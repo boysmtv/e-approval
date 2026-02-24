@@ -1,5 +1,5 @@
 /*
- * Project: Shopme App
+ * Project: E-Approval
  * Author: Boys.mtv@gmail.com
  * File: LoginActivity.kt
  *
@@ -32,11 +32,9 @@ class LoginFragment :
     @Inject
     lateinit var navigator: AppNavigator
 
-    override fun bindView(view: View) =
-        FragmentLoginBinding.bind(view)
+    override fun bindView(view: View) = FragmentLoginBinding.bind(view)
 
     override fun setupView() {
-
         binding.etUsername.addTextChangedListener {
             viewModel.sendEvent(
                 LoginEvent.OnEmailChanged(it.toString())
