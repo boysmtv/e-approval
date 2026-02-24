@@ -1,5 +1,5 @@
 /*
- * Project: Shopme App
+ * Project: E-Approval
  * Author: Boys.mtv@gmail.com
  * File: AppNavigator.kt
  *
@@ -10,4 +10,7 @@ package id.co.ikonsultan.approval.core.common.navigation
 
 interface AppNavigator {
     fun openHome()
+    fun openLogin()
+    fun openHistory()
+    fun backToHome()
 }

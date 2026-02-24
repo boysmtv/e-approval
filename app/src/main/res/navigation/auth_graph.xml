@@ -14,7 +14,8 @@
             android:id="@+id/action_login_to_main"
             app:destination="@id/main_graph"
             app:popUpTo="@id/auth_graph"
-            app:popUpToInclusive="true"/>
+            app:popUpToInclusive="true" />
+
     </fragment>
 
 </navigation>

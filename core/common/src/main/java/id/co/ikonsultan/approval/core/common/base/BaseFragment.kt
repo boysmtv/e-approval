@@ -1,5 +1,5 @@
 /*
- * Project: Shopme App
+ * Project: E-Approval
  * Author: Boys.mtv@gmail.com
  * File: BaseFragment.kt
  *
@@ -12,6 +12,7 @@ import android.os.Bundle
 import android.view.View
 import androidx.annotation.LayoutRes
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.viewbinding.ViewBinding
@@ -48,9 +49,7 @@ abstract class BaseFragment<
 
     private fun observeState() {
         viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(
-                androidx.lifecycle.Lifecycle.State.STARTED
-            ) {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.state.collect {
                     renderState(it)
                 }
@@ -60,9 +59,7 @@ abstract class BaseFragment<
 
     private fun observeEffect() {
         viewLifecycleOwner.lifecycleScope.launch {
-            viewLifecycleOwner.repeatOnLifecycle(
-                androidx.lifecycle.Lifecycle.State.STARTED
-            ) {
+            viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
                 viewModel.effect.collect {
                     handleEffect(it)
                 }
