@@ -69,12 +69,12 @@
             android:text="Checker"
             android:textColor="@android:color/darker_gray"
             android:textSize="12sp"
-            card_view:layout_constraintBottom_toBottomOf="@+id/tvRole"
-            card_view:layout_constraintEnd_toStartOf="@+id/tvRole"
-            card_view:layout_constraintTop_toTopOf="@+id/tvRole" />
+            card_view:layout_constraintBottom_toBottomOf="@+id/tvDepartment"
+            card_view:layout_constraintEnd_toStartOf="@+id/tvDepartment"
+            card_view:layout_constraintTop_toTopOf="@+id/tvDepartment" />
 
         <TextView
-            android:id="@+id/tvRole"
+            android:id="@+id/tvDepartment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:fontFamily="@font/poppins_semibold"

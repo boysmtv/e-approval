@@ -36,7 +36,7 @@ class HistoryAdapter(
         holder.binding.tvTitle.text = item.title
         holder.binding.tvDate.text = item.date
         holder.binding.tvStatus.text = item.status
-        holder.binding.tvRole.text = item.role
+        holder.binding.tvDepartment.text = item.department
 
         val color = when (item.status) {
             "Reject" -> Color.RED

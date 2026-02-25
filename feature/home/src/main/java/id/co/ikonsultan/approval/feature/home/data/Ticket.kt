@@ -9,8 +9,9 @@
 package id.co.ikonsultan.approval.feature.home.data
 
 data class Ticket(
+    val id: String,
     val title: String,
+    val department: String,
     val date: String,
-    val status: String,
-    val role: String
+    val status: String
 )

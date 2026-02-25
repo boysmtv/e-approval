@@ -9,6 +9,8 @@
 package id.co.ikonsultan.approval.feature.home.ui
 
 import android.view.View
+import androidx.core.view.ViewCompat
+import androidx.core.view.WindowInsetsCompat
 import androidx.fragment.app.viewModels
 import dagger.hilt.android.AndroidEntryPoint
 import id.co.ikonsultan.approval.core.common.base.BaseFragment
@@ -29,14 +31,27 @@ class HistoryFragment :
     @Inject
     lateinit var navigator: AppNavigator
 
-    override fun bindView(view: View) =
-        FragmentHistoryBinding.bind(view)
+    override fun bindView(view: View) = FragmentHistoryBinding.bind(view)
 
     override fun setupView() {
         viewModel.sendEvent(HistoryEvent.LoadData)
 
         binding.header.setOnClickListener {
             viewModel.sendEvent(HistoryEvent.OnBackClicked)
+        }
+
+        binding.chipGroup.setOnCheckedStateChangeListener { group, checkedIds ->
+            when (checkedIds.firstOrNull()) {
+                R.id.chipFinance -> filter("finance")
+                R.id.chipHR -> filter("hr")
+                R.id.chipIT -> filter("it")
+            }
+        }
+
+        ViewCompat.setOnApplyWindowInsetsListener(binding.root) { view, insets ->
+            val bottom = insets.getInsets(WindowInsetsCompat.Type.systemBars()).bottom
+            view.setPadding(24, 24, 24, bottom + 72)
+            insets
         }
     }
 
@@ -48,5 +63,9 @@ class HistoryFragment :
         when (effect) {
             HistoryEffect.NavigateBack -> navigator.backToHome()
         }
+    }
+
+    private fun filter(type: String) {
+        // TODO filter recyclerView
     }
 }
