@@ -42,12 +42,16 @@ class HistoryViewModel @Inject constructor(
         setState {
             copy(
                 tickets = listOf(
-                    Ticket("Ticket 001", "30/10/2025", "Reject", "Group Head"),
-                    Ticket("Ticket 002", "01/11/2025", "Approve", "Supervisor"),
-                    Ticket("Ticket 003", "02/11/2025", "Escalate", "Manager"),
-                    Ticket("Ticket 004", "03/11/2025", "Submited", "Director"),
-                    Ticket("Ticket 005", "04/11/2025", "Draft", "Supervisor"),
-                    Ticket("Ticket 006", "05/11/2025", "Approve", "Manager")
+                    Ticket("TK-001", "Payment approval", "Finance", "24 Feb 2026", "Pending"),
+                    Ticket("TK-002", "Salary adjustment", "HR", "23 Feb 2026", "Approved"),
+                    Ticket("TK-003", "Laptop request", "IT Team", "22 Feb 2026", "Rejected"),
+                    Ticket("TK-004", "Budget revision", "Finance", "21 Feb 2026", "Pending"),
+                    Ticket("TK-005", "Leave request", "HR", "20 Feb 2026", "Approved"),
+                    Ticket("TK-006", "Server upgrade", "IT Team", "19 Feb 2026", "Pending"),
+                    Ticket("TK-007", "Tax document", "Finance", "18 Feb 2026", "Approved"),
+                    Ticket("TK-008", "Recruitment", "HR", "17 Feb 2026", "Pending"),
+                    Ticket("TK-009", "VPN access", "IT Team", "16 Feb 2026", "Approved"),
+                    Ticket("TK-010", "Expense claim", "Finance", "15 Feb 2026", "Rejected")
                 )
             )
         }
