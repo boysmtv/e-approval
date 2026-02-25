@@ -92,6 +92,29 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
 
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilStatus"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+                app:boxCornerRadiusTopStart="16dp"
+                app:boxCornerRadiusTopEnd="16dp"
+                app:boxCornerRadiusBottomStart="16dp"
+                app:boxCornerRadiusBottomEnd="16dp"
+                app:boxStrokeColor="#D0D5DD"
+                app:endIconMode="dropdown_menu">
+
+                <com.google.android.material.textfield.MaterialAutoCompleteTextView
+                    android:id="@+id/dropStatus"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="16dp"
+                    android:textSize="16sp"
+                    android:hint="Select Status"
+                    android:inputType="none" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
