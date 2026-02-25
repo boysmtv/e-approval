@@ -13,4 +13,7 @@ interface AppNavigator {
     fun openLogin()
     fun openHistory()
     fun backToHome()
+    fun openRequest()
+    fun openDetail(id: String)
+    fun back()
 }

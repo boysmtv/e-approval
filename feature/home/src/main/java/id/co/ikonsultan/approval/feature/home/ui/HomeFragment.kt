@@ -39,7 +39,7 @@ class HomeFragment :
     override fun renderState(state: HomeState) {
         binding.tvName.text = state.username
         binding.tvCompany.text = state.company
-        binding.tvRole.text = state.role
+        binding.tvDepartment.text = state.role
 
         binding.rvMenu.adapter =
             HomeMenuAdapter(state.menu) {

@@ -15,15 +15,15 @@
         android:padding="24dp">
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
                 android:id="@+id/tvTitle"
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Ticket 001"
                 android:textColor="@android:color/black"
@@ -32,138 +32,114 @@
                 card_view:layout_constraintTop_toTopOf="parent" />
 
             <TextView
-                android:id="@+id/tvDate"
-                android:gravity="end"
-                android:layout_weight="1"
+                android:id="@+id/tvStatus"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
+                android:gravity="end"
                 android:text="Pending"
                 android:textColor="@android:color/holo_red_dark"
-                android:textSize="16sp"
-                card_view:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintTop_toTopOf="@+id/tvTitle" />
+                android:textSize="16sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvTitle"
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Request Date"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent" />
+                android:textSize="12sp" />
 
             <TextView
                 android:id="@+id/tvDate"
-                android:gravity="end"
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
+                android:gravity="end"
                 android:text="30/10/2025"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintTop_toTopOf="@+id/tvTitle" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvTitle"
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Requester"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent" />
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/tvDate"
-                android:gravity="end"
-                android:layout_weight="1"
+                android:id="@+id/tvRequester"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
+                android:gravity="end"
                 android:text="Roy Andrea"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintTop_toTopOf="@+id/tvTitle" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvTitle"
-                android:layout_weight="1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Approver"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintStart_toStartOf="parent"
-                card_view:layout_constraintTop_toTopOf="parent" />
+                android:textSize="12sp" />
 
             <TextView
-                android:id="@+id/tvDate"
-                android:gravity="end"
-                android:layout_weight="1"
+                android:id="@+id/tvApprover"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_regular"
+                android:gravity="end"
                 android:text="-"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintTop_toTopOf="@+id/tvTitle" />
+                android:textSize="12sp" />
 
         </LinearLayout>
 
         <LinearLayout
-            android:orientation="horizontal"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
             <TextView
-                android:id="@+id/tvDate"
-                android:gravity="end"
-                android:layout_weight="1"
+                android:id="@+id/tvSeeDetail"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:fontFamily="@font/poppins_semibold"
+                android:gravity="end"
                 android:text="See Detail"
-                android:textColor="@android:color/darker_gray"
-                android:textSize="12sp"
-                card_view:layout_constraintBottom_toBottomOf="@+id/tvTitle"
-                card_view:layout_constraintEnd_toEndOf="parent"
-                card_view:layout_constraintTop_toTopOf="@+id/tvTitle" />
+                android:textColor="@android:color/holo_blue_dark"
+                android:textSize="12sp" />
 
         </LinearLayout>
 
