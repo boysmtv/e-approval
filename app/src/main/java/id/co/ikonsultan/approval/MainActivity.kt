@@ -10,6 +10,8 @@ import androidx.navigation.fragment.NavHostFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import androidx.navigation.ui.setupWithNavController
+import id.co.ikonsultan.approval.navigation.AppNavigatorImpl
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class MainActivity : AppCompatActivity() {
@@ -23,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // --- NAV HOST ---
         val navHost = supportFragmentManager
             .findFragmentById(R.id.nav_host) as NavHostFragment
         navController = navHost.navController

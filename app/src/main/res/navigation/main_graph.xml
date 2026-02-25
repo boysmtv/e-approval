@@ -7,11 +7,32 @@
     <fragment
         android:id="@+id/homeFragment"
         android:name="id.co.ikonsultan.approval.feature.home.ui.HomeFragment"
-        android:label="Home" />
+        android:label="Home" >
+        <action
+            android:id="@+id/action_homeFragment_to_historyFragment"
+            app:destination="@id/historyFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_requestFragment"
+            app:destination="@id/requestFragment" />
+    </fragment>
 
     <fragment
         android:id="@+id/historyFragment"
         android:name="id.co.ikonsultan.approval.feature.home.ui.HistoryFragment"
+        android:label="History" />
+
+    <fragment
+        android:id="@+id/requestFragment"
+        android:name="id.co.ikonsultan.approval.feature.home.ui.RequestFragment"
+        android:label="History" >
+        <action
+            android:id="@+id/action_requestFragment_to_detailRequestFragment"
+            app:destination="@id/detailRequestFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailRequestFragment"
+        android:name="id.co.ikonsultan.approval.feature.home.ui.DetailRequestFragment"
         android:label="History" />
 
 </navigation>

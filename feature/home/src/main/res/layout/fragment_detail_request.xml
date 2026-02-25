@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@android:color/background_light"
@@ -92,28 +93,16 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
 
-            <com.google.android.material.textfield.TextInputLayout
-                android:id="@+id/tilStatus"
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvSla"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
-                app:boxCornerRadiusTopStart="16dp"
-                app:boxCornerRadiusTopEnd="16dp"
-                app:boxCornerRadiusBottomStart="16dp"
-                app:boxCornerRadiusBottomEnd="16dp"
-                app:boxStrokeColor="#D0D5DD"
-                app:endIconMode="dropdown_menu">
-
-                <com.google.android.material.textfield.MaterialAutoCompleteTextView
-                    android:id="@+id/dropStatus"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:padding="16dp"
-                    android:textSize="16sp"
-                    android:hint="Select Status"
-                    android:inputType="none" />
-
-            </com.google.android.material.textfield.TextInputLayout>
+                android:clipToPadding="false"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:orientation="horizontal"
+                app:spanCount="3"
+                tools:itemCount="3"
+                tools:listitem="@layout/item_list_sla" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -154,8 +143,8 @@
                 android:layout_marginTop="8dp"
                 android:enabled="false"
                 android:fontFamily="@font/poppins_regular"
-                android:inputType="textMultiLine"
                 android:hint="-"
+                android:inputType="textMultiLine"
                 android:textColor="#000000"
                 android:textColorHint="#BDBDBD"
                 android:textSize="16sp" />
@@ -187,6 +176,7 @@
                     style="@style/RoundedEditText"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
+                    android:layout_marginEnd="8dp"
                     android:fontFamily="@font/poppins_regular"
                     android:inputType="textPersonName"
                     android:text="Finance - 003"
@@ -229,8 +219,8 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:fontFamily="@font/poppins_regular"
-                android:inputType="textMultiLine"
                 android:hint="input something notes"
+                android:inputType="textMultiLine"
                 android:textColor="#000000"
                 android:textColorHint="#BDBDBD"
                 android:textSize="16sp" />
@@ -254,13 +244,14 @@
                 android:inputType="textPersonName"
                 android:paddingStart="16dp"
                 android:paddingEnd="16dp"
-                android:text="Finance - 003"
+                android:text="Approved"
                 android:textColor="#000000"
                 android:textColorHint="#BDBDBD"
                 android:textSize="16sp" />
 
 
             <Button
+                android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
