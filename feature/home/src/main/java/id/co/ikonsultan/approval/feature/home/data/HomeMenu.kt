@@ -13,7 +13,3 @@ data class HomeMenu(
     val icon: Int,
     val type: MenuType
 )
-
-enum class MenuType {
-    MAKER, CHECKER, HISTORY
-}

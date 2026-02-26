@@ -26,15 +26,27 @@ class AppNavigatorImpl @Inject constructor(
         navController.navigate(R.id.action_login_to_main)
     }
 
+    override fun openSearch() {
+        navController.navigate(R.id.searchFragment)
+    }
+
+    override fun openMail() {
+        navController.navigate(R.id.mailFragment)
+    }
+
+    override fun openSetting() {
+        navController.navigate(R.id.searchFragment)
+    }
+
     override fun openHistory() {
         navController.navigate(R.id.historyFragment)
     }
 
-    override fun openRequest() {
+    override fun openChecker() {
         navController.navigate(R.id.requestFragment)
     }
 
-    override fun openDetail(id: String) {
+    override fun openCheckerDetail(id: String) {
         val bundle = Bundle().apply {
             putString("id", id)
         }

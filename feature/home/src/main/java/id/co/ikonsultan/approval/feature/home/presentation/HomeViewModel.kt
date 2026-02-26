@@ -32,7 +32,7 @@ class HomeViewModel @Inject constructor(
         launchMain {
             event.collect { event ->
                 when (event) {
-                    HomeEvent.LoadData -> loadData()
+                    is HomeEvent.LoadData -> loadData()
                     is HomeEvent.OnMenuClicked -> handleMenu(event.menu)
                 }
             }

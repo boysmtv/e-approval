@@ -50,8 +50,8 @@ class HomeFragment :
     override fun handleEffect(effect: HomeEffect) {
         when (effect) {
             HomeEffect.NavigateMaker -> navigator.openHistory()
-            HomeEffect.NavigateChecker -> navigator.openHistory()
-            HomeEffect.NavigateHistory -> navigator.openHistory()
+            HomeEffect.NavigateChecker -> navigator.openChecker()
+            HomeEffect.NavigateHistory -> {}
         }
     }
 }
