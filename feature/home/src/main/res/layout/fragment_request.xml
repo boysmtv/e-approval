@@ -52,30 +52,7 @@
             android:layout_height="wrap_content"
             app:chipSpacingHorizontal="12dp"
             app:selectionRequired="true"
-            app:singleSelection="true">
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipFinance"
-                style="@style/FilterChipStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Finance" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipHR"
-                style="@style/FilterChipStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="HR" />
-
-            <com.google.android.material.chip.Chip
-                android:id="@+id/chipIT"
-                style="@style/FilterChipStyle"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="IT Team" />
-
-        </com.google.android.material.chip.ChipGroup>
+            app:singleSelection="true"/>
 
     </HorizontalScrollView>
 
@@ -86,8 +63,10 @@
         android:layout_marginTop="16dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/chipScroll"
+        app:layout_constraintVertical_bias="0.0"
         tools:itemCount="10"
         tools:listitem="@layout/item_list_request" />
 

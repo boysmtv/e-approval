@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -9,40 +10,41 @@
 
     <LinearLayout
         android:id="@+id/header"
-        android:layout_width="match_parent"
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <ImageView
             android:layout_width="24dp"
             android:layout_height="24dp"
-            android:contentDescription="no"
+            android:contentDescription="back"
             android:src="@drawable/ic_back" />
 
         <TextView
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginStart="12dp"
+            android:layout_weight="1"
             android:fontFamily="@font/poppins_semibold"
-            android:gravity="center_vertical"
             android:text="Details"
             android:textColor="@android:color/black"
             android:textSize="20sp"
             android:textStyle="bold" />
-
     </LinearLayout>
 
+    <!-- CONTENT -->
     <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
         android:scrollbars="none"
+        app:layout_constraintTop_toBottomOf="@id/header"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/header">
+        app:layout_constraintEnd_toEndOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -57,32 +59,25 @@
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Ticket 001"
                 android:textColor="@android:color/darker_gray"
-                android:textSize="14sp">
-
-            </TextView>
+                android:textSize="14sp" />
 
             <TextView
+                android:id="@+id/labelStaff"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_marginTop="12dp"
                 android:fontFamily="@font/poppins_semibold"
                 android:text="Staff"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
-
 
             <EditText
                 style="@style/RoundedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:clickable="false"
                 android:enabled="false"
-                android:fontFamily="@font/poppins_regular"
-                android:inputType="textPersonName"
-                android:text="Roy Khi Yho Shi"
-                android:textColor="#000000"
-                android:textColorHint="#BDBDBD"
-                android:textSize="16sp" />
+                android:text="Roy Khi Yho Shi" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -97,12 +92,11 @@
                 android:id="@+id/rvSla"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:clipToPadding="false"
+                android:nestedScrollingEnabled="false"
                 app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:orientation="horizontal"
                 app:spanCount="3"
-                tools:itemCount="3"
-                tools:listitem="@layout/item_list_sla" />
+                tools:listitem="@layout/item_list_sla"
+                tools:itemCount="3" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -118,14 +112,8 @@
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:clickable="false"
                 android:enabled="false"
-                android:fontFamily="@font/poppins_regular"
-                android:inputType="textPersonName"
-                android:text="Finance - 003"
-                android:textColor="#000000"
-                android:textColorHint="#BDBDBD"
-                android:textSize="16sp" />
+                android:text="Finance - 003" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -142,19 +130,13 @@
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
                 android:enabled="false"
-                android:fontFamily="@font/poppins_regular"
-                android:hint="-"
-                android:inputType="textMultiLine"
-                android:textColor="#000000"
-                android:textColorHint="#BDBDBD"
-                android:textSize="16sp" />
+                android:hint="-" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
                 android:layout_marginTop="16dp"
                 android:background="#E0E0E0" />
-
 
             <TextView
                 android:layout_width="wrap_content"
@@ -168,8 +150,7 @@
             <androidx.constraintlayout.widget.ConstraintLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginTop="8dp"
-                android:orientation="horizontal">
+                android:layout_marginTop="8dp">
 
                 <EditText
                     android:id="@+id/etUsername"
@@ -177,31 +158,22 @@
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="8dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:inputType="textPersonName"
+                    android:enabled="false"
                     android:text="Finance - 003"
-                    android:textColor="#000000"
-                    android:textColorHint="#BDBDBD"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toStartOf="@+id/btnView"
-                    app:layout_constraintStart_toStartOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnView" />
 
                 <Button
                     android:id="@+id/btnView"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
-                    android:background="@drawable/bg_button_primary"
-                    android:elevation="0dp"
-                    android:fontFamily="@font/poppins_regular"
-                    android:stateListAnimator="@null"
                     android:text="View"
                     android:textAllCaps="false"
+                    android:background="@drawable/bg_button_primary"
                     android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    app:layout_constraintEnd_toEndOf="parent"
-                    app:layout_constraintTop_toTopOf="parent" />
-
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -218,12 +190,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/poppins_regular"
-                android:hint="input something notes"
-                android:inputType="textMultiLine"
-                android:textColor="#000000"
-                android:textColorHint="#BDBDBD"
-                android:textSize="16sp" />
+                android:hint="input something notes" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -234,39 +201,24 @@
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
 
-
             <EditText
                 style="@style/RoundedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:fontFamily="@font/poppins_regular"
-                android:inputType="textPersonName"
-                android:paddingStart="16dp"
-                android:paddingEnd="16dp"
-                android:text="Approved"
-                android:textColor="#000000"
-                android:textColorHint="#BDBDBD"
-                android:textSize="16sp" />
-
+                android:text="Approved" />
 
             <Button
                 android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
-                android:background="@drawable/bg_button_primary"
-                android:elevation="0dp"
-                android:fontFamily="@font/poppins_regular"
-                android:stateListAnimator="@null"
                 android:text="Confirm"
                 android:textAllCaps="false"
-                android:textColor="@android:color/white"
-                android:textSize="16sp" />
+                android:background="@drawable/bg_button_primary"
+                android:textColor="@android:color/white" />
 
         </LinearLayout>
-
     </ScrollView>
-
 
 </androidx.constraintlayout.widget.ConstraintLayout>

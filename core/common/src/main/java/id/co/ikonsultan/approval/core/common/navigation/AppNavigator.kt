@@ -9,11 +9,14 @@
 package id.co.ikonsultan.approval.core.common.navigation
 
 interface AppNavigator {
-    fun openHome()
     fun openLogin()
+    fun openHome()
+    fun openSearch()
+    fun openMail()
+    fun openSetting()
     fun openHistory()
+    fun openChecker()
+    fun openCheckerDetail(id: String)
     fun backToHome()
-    fun openRequest()
-    fun openDetail(id: String)
     fun back()
 }

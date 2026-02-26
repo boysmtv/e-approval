@@ -17,13 +17,11 @@
         app:navGraph="@navigation/root_graph" />
 
 
-    <com.google.android.material.bottomnavigation.BottomNavigationView xmlns:android="http://schemas.android.com/apk/res/android"
-        xmlns:app="http://schemas.android.com/apk/res-auto"
+    <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:elevation="16dp"
-        android:background="@drawable/bg_bottom_nav_container"
+        android:padding="8dp"
         app:itemIconTint="#3629B7"
         app:itemTextColor="#3629B7"
         app:labelVisibilityMode="labeled"

@@ -23,11 +23,10 @@
     <color name="text_hint">#BDBDBD</color>
 
     <!-- STATUS COLORS -->
-    <color name="status_reject">#FF4D4F</color>
-    <color name="status_approve">#2979FF</color>
-    <color name="status_escalate">#FF9800</color>
-    <color name="status_submitted">#00C853</color>
-    <color name="status_draft">#FF5722</color>
+    <color name="approved">#3629B7</color>
+    <color name="pending">#FFAF2A</color>
+    <color name="escalate">#FFAF2A</color>
+    <color name="reject">#FF4267</color>
 
     <!-- BORDER / DIVIDER -->
     <color name="divider">#EEEEEE</color>
