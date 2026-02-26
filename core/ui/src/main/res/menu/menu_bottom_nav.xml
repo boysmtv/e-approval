@@ -6,8 +6,18 @@
         android:title="Home" />
 
     <item
-        android:id="@+id/historyFragment"
+        android:id="@+id/searchFragment"
+        android:icon="@drawable/ic_search"
+        android:title="Search" />
+
+    <item
+        android:id="@+id/mailFragment"
         android:icon="@drawable/ic_mail"
-        android:title="Inbox" />
+        android:title="Mail" />
+
+    <item
+        android:id="@+id/settingFragment"
+        android:icon="@drawable/ic_setting"
+        android:title="Setting" />
 
 </menu>

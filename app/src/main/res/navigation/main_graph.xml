@@ -14,7 +14,31 @@
         <action
             android:id="@+id/action_homeFragment_to_requestFragment"
             app:destination="@id/requestFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_settingFragment"
+            app:destination="@id/settingFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_mailFragment"
+            app:destination="@id/mailFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_searchFragment"
+            app:destination="@id/searchFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/searchFragment"
+        android:name="id.co.ikonsultan.approval.feature.home.ui.SearchFragment"
+        android:label="Search" />
+
+    <fragment
+        android:id="@+id/mailFragment"
+        android:name="id.co.ikonsultan.approval.feature.home.ui.MailFragment"
+        android:label="Mail" />
+
+    <fragment
+        android:id="@+id/settingFragment"
+        android:name="id.co.ikonsultan.approval.feature.home.ui.SettingFragment"
+        android:label="Setting" />
 
     <fragment
         android:id="@+id/historyFragment"
@@ -24,7 +48,7 @@
     <fragment
         android:id="@+id/requestFragment"
         android:name="id.co.ikonsultan.approval.feature.home.ui.RequestFragment"
-        android:label="History" >
+        android:label="Request" >
         <action
             android:id="@+id/action_requestFragment_to_detailRequestFragment"
             app:destination="@id/detailRequestFragment" />
@@ -33,6 +57,6 @@
     <fragment
         android:id="@+id/detailRequestFragment"
         android:name="id.co.ikonsultan.approval.feature.home.ui.DetailRequestFragment"
-        android:label="History" />
+        android:label="RequestDetail" />
 
 </navigation>

@@ -30,13 +30,14 @@ class MainActivity : AppCompatActivity() {
         navController = navHost.navController
 
         bottomNav = findViewById(R.id.bottomNavigation)
-
         bottomNav.setupWithNavController(navController)
 
         navController.addOnDestinationChangedListener { _, destination, _ ->
             val showBottomBar = destination.id in setOf(
                 R.id.homeFragment,
-                R.id.historyFragment
+                R.id.searchFragment,
+                R.id.mailFragment,
+                R.id.settingFragment
             )
             bottomNav.visibility = if (showBottomBar) View.VISIBLE else View.GONE
         }
@@ -49,9 +50,7 @@ class MainActivity : AppCompatActivity() {
 
     private fun handleBackPressed() {
         onBackPressedDispatcher.addCallback(this) {
-
             when (navController.currentDestination?.id) {
-
                 R.id.homeFragment -> {
                     if (System.currentTimeMillis() - backPressedTime < 2000) {
                         finish()
@@ -69,7 +68,15 @@ class MainActivity : AppCompatActivity() {
                     navController.popBackStack()
                 }
 
-                else -> {
+                R.id.mailFragment -> {
+                    navController.popBackStack()
+                }
+
+                R.id.settingFragment -> {
+                    navController.popBackStack()
+                }
+
+                R.id.requestFragment -> {
                     navController.popBackStack()
                 }
             }

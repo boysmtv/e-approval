@@ -7,6 +7,12 @@
 
 package id.co.ikonsultan.approval.feature.home.adapter
 
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.recyclerview.widget.RecyclerView
+import id.co.ikonsultan.approval.feature.home.data.StatusItem
+import id.co.ikonsultan.approval.feature.home.databinding.ItemStatusBinding
+
 class StatusAdapter(
     private val items: List<StatusItem>,
     private val onClick: (StatusItem) -> Unit

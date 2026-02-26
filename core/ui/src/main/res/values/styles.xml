@@ -3,10 +3,10 @@
 
     <style name="ShapeAppearance.Pill" parent="ShapeAppearance.MaterialComponents.SmallComponent">
         <item name="cornerFamily">rounded</item>
-        <item name="cornerSize">50%</item>
+        <item name="cornerSize">35%</item>
     </style>
 
-    <style name="FilterChipStyle" parent="Widget.MaterialComponents.Chip.Choice">
+    <style name="FilterChipStyle" parent="Widget.MaterialComponents.Chip.Filter">
         <item name="shapeAppearanceOverlay">@style/ShapeAppearance.Pill</item>
         <item name="chipStartPadding">20dp</item>
         <item name="chipEndPadding">20dp</item>
@@ -18,7 +18,11 @@
         <item name="chipIconVisible">false</item>
         <item name="checkedIconVisible">false</item>
         <item name="rippleColor">@color/purple_200</item>
-
+        <item name="android:fontFamily">@font/poppins_semibold</item>
+        <item name="ensureMinTouchTargetSize">false</item>
+        <item name="chipStrokeWidth">0dp</item>
+        <item name="android:insetLeft">0dp</item>
+        <item name="android:insetRight">0dp</item>
     </style>
 
     <style name="RoundedEditText">

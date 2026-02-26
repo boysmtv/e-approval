@@ -9,9 +9,12 @@ package id.co.ikonsultan.approval.feature.home.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
+import androidx.compose.ui.graphics.Color
+import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import id.co.ikonsultan.approval.core.ui.R
 import id.co.ikonsultan.approval.feature.home.data.RequestItem
 import id.co.ikonsultan.approval.feature.home.databinding.ItemListRequestBinding
 
@@ -39,10 +42,23 @@ class RequestAdapter(
 
         fun bind(item: RequestItem) {
             binding.tvTitle.text = item.title
-            binding.tvStatus.text = item.status
             binding.tvDate.text = item.date
             binding.tvRequester.text = item.requester
             binding.tvApprover.text = item.approver
+
+            val status = item.status
+            binding.tvStatus.text = status
+
+            val colorRes = when (status) {
+                "Approved" -> R.color.approved
+                "Pending" -> R.color.pending
+                "Rejected" -> R.color.reject
+                else -> android.R.color.black
+            }
+
+            binding.tvStatus.setTextColor(
+                ContextCompat.getColor(binding.root.context, colorRes)
+            )
 
             binding.root.setOnClickListener {
                 onClick(item)
