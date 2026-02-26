@@ -14,4 +14,5 @@ data class RequestItem(
     val date: String,
     val requester: String,
     val approver: String,
+    val department: String,
 )

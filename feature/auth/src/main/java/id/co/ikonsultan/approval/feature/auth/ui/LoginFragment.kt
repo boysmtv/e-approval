@@ -54,6 +54,7 @@ class LoginFragment :
 
     override fun renderState(state: LoginState) {
         binding.btnSubmit.isEnabled = state.isButtonEnabled
+        binding.btnSubmit.isEnabled = true
     }
 
     override fun handleEffect(effect: LoginEffect) {
