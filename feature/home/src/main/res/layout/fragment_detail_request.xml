@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -14,11 +13,12 @@
         android:layout_height="wrap_content"
         android:gravity="center_vertical"
         android:orientation="horizontal"
-        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
+            android:id="@+id/btnBack"
             android:layout_width="24dp"
             android:layout_height="24dp"
             android:contentDescription="back"
@@ -36,15 +36,15 @@
             android:textStyle="bold" />
     </LinearLayout>
 
-    <!-- CONTENT -->
     <ScrollView
         android:layout_width="0dp"
         android:layout_height="0dp"
         android:scrollbars="none"
-        app:layout_constraintTop_toBottomOf="@id/header"
+        android:layout_marginTop="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent">
+        app:layout_constraintTop_toBottomOf="@id/header">
 
         <LinearLayout
             android:layout_width="match_parent"
@@ -52,12 +52,12 @@
             android:orientation="vertical">
 
             <TextView
+                android:id="@+id/tvTicketId"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center"
                 android:layout_marginTop="16dp"
                 android:fontFamily="@font/poppins_semibold"
-                android:text="Ticket 001"
                 android:textColor="@android:color/darker_gray"
                 android:textSize="14sp" />
 
@@ -72,12 +72,12 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/etStaff"
                 style="@style/RoundedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:enabled="false"
-                android:text="Roy Khi Yho Shi" />
+                android:enabled="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -92,11 +92,11 @@
                 android:id="@+id/rvSla"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:overScrollMode="never"
+                android:scrollbars="horizontal"
+                tools:itemCount="1"
                 android:nestedScrollingEnabled="false"
-                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
-                app:spanCount="3"
-                tools:listitem="@layout/item_list_sla"
-                tools:itemCount="3" />
+                tools:listitem="@layout/item_list_sla" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -108,12 +108,12 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/etReportType"
                 style="@style/RoundedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="8dp"
-                android:enabled="false"
-                android:text="Finance - 003" />
+                android:enabled="false" />
 
             <TextView
                 android:layout_width="wrap_content"
@@ -125,6 +125,7 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/etNotes"
                 style="@style/RoundedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -153,27 +154,26 @@
                 android:layout_marginTop="8dp">
 
                 <EditText
-                    android:id="@+id/etUsername"
+                    android:id="@+id/etFilesName"
                     style="@style/RoundedEditText"
                     android:layout_width="0dp"
                     android:layout_height="50dp"
                     android:layout_marginEnd="8dp"
                     android:enabled="false"
-                    android:text="Finance - 003"
-                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/btnView"
                     app:layout_constraintStart_toStartOf="parent"
-                    app:layout_constraintEnd_toStartOf="@id/btnView" />
+                    app:layout_constraintTop_toTopOf="parent" />
 
                 <Button
                     android:id="@+id/btnView"
                     android:layout_width="100dp"
                     android:layout_height="50dp"
+                    android:background="@drawable/bg_button_primary"
                     android:text="View"
                     android:textAllCaps="false"
-                    android:background="@drawable/bg_button_primary"
                     android:textColor="@android:color/white"
-                    app:layout_constraintTop_toTopOf="parent"
-                    app:layout_constraintEnd_toEndOf="parent" />
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
             </androidx.constraintlayout.widget.ConstraintLayout>
 
             <TextView
@@ -202,20 +202,20 @@
                 android:textSize="14sp" />
 
             <EditText
+                android:id="@+id/etStatus"
                 style="@style/RoundedEditText"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
-                android:layout_marginTop="8dp"
-                android:text="Approved" />
+                android:layout_marginTop="8dp" />
 
             <Button
                 android:id="@+id/btnConfirm"
                 android:layout_width="match_parent"
                 android:layout_height="50dp"
                 android:layout_marginTop="16dp"
+                android:background="@drawable/bg_button_primary"
                 android:text="Confirm"
                 android:textAllCaps="false"
-                android:background="@drawable/bg_button_primary"
                 android:textColor="@android:color/white" />
 
         </LinearLayout>
