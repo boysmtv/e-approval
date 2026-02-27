@@ -12,15 +12,19 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
+import id.co.ikonsultan.approval.feature.home.data.DetailRequestSlaItem
 import id.co.ikonsultan.approval.feature.home.databinding.ItemListSlaBinding
 
 class SlaAdapter :
-    ListAdapter<String, SlaAdapter.ViewHolder>(DIFF) {
+    ListAdapter<DetailRequestSlaItem, SlaAdapter.ViewHolder>(DIFF) {
 
     companion object {
-        private val DIFF = object : DiffUtil.ItemCallback<String>() {
-            override fun areItemsTheSame(oldItem: String, newItem: String) = oldItem == newItem
-            override fun areContentsTheSame(oldItem: String, newItem: String) = oldItem == newItem
+        private val DIFF = object : DiffUtil.ItemCallback<DetailRequestSlaItem>() {
+            override fun areItemsTheSame(oldItem: DetailRequestSlaItem, newItem: DetailRequestSlaItem) =
+                oldItem.role == newItem.role
+
+            override fun areContentsTheSame(oldItem: DetailRequestSlaItem, newItem: DetailRequestSlaItem) =
+                oldItem == newItem
         }
     }
 
@@ -28,8 +32,13 @@ class SlaAdapter :
         private val binding: ItemListSlaBinding
     ) : RecyclerView.ViewHolder(binding.root) {
 
-        fun bind(item: String) {
-            binding.tvTitle.text = item
+        fun bind(item: DetailRequestSlaItem) {
+            binding.tvTitle.text = item.role
+
+             /*Glide.with(binding.imgAvatar)
+                 .load(item.imageUrl)
+                 .placeholder(R.drawable.ic_user)
+                 .into(binding.imgAvatar)*/
         }
     }
 
