@@ -3,6 +3,8 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_margin="32dp"
     android:background="@drawable/bg_dialog_round"
     android:padding="20dp">
 
@@ -10,44 +12,58 @@
         android:id="@+id/tvTitle"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="12dp"
         android:gravity="center"
+        android:fontFamily="@font/poppins_semibold"
         android:text="Escalate to"
         android:textSize="18sp"
         android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintBottom_toBottomOf="@+id/btnClose"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="@+id/btnClose" />
 
     <ImageView
         android:id="@+id/btnClose"
-        android:layout_width="20dp"
-        android:layout_height="20dp"
-        android:importantForAccessibility="no"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:padding="8dp"
+        android:scaleType="centerInside"
         android:src="@drawable/ic_close"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@android:color/black" />
 
     <EditText
         android:id="@+id/etSearch"
-        android:layout_width="0dp"
-        android:layout_height="48dp"
-        android:layout_marginTop="16dp"
-        android:background="@drawable/bg_edittext_rounded"
+        android:layout_width="match_parent"
+        android:layout_height="56dp"
+        android:layout_marginTop="32dp"
+        android:background="@drawable/bg_textfield"
+        android:fontFamily="@font/poppins_regular"
         android:hint="Search"
         android:inputType="textPersonName"
-        android:paddingHorizontal="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tvTitle" />
+        android:paddingStart="20dp"
+        android:paddingEnd="20dp"
+        android:drawableStart="@drawable/ic_search"
+        android:drawablePadding="12dp"
+        android:textColor="#000000"
+        android:textColorHint="#BDBDBD"
+        android:textSize="16sp"
+        app:layout_constraintTop_toBottomOf="@+id/btnClose" />
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rvUser"
-        android:layout_width="0dp"
-        android:layout_height="300dp"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
         android:layout_marginTop="12dp"
-        app:layout_constraintEnd_toEndOf="parent"
+        tools:itemCount="10"
+        tools:listitem="@layout/dialog_escalate_item"
+        app:layout_constraintTop_toBottomOf="@id/etSearch"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/etSearch" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintHeight_percent="0.7" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

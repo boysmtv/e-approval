@@ -10,11 +10,11 @@ package id.co.ikonsultan.approval.feature.home.contract
 import id.co.ikonsultan.approval.core.common.base.UiEffect
 import id.co.ikonsultan.approval.core.common.base.UiEvent
 import id.co.ikonsultan.approval.core.common.base.UiState
+import id.co.ikonsultan.approval.feature.home.data.DetailRequestItem
+import id.co.ikonsultan.approval.feature.home.data.DetailRequestSlaItem
 
 data class DetailRequestState(
-    val ticketId: String = "",
-    val reportType: String = "",
-    val slaList: List<String> = emptyList()
+    val requestItem: DetailRequestItem = DetailRequestItem()
 ) : UiState
 
 sealed class DetailRequestEvent : UiEvent {
