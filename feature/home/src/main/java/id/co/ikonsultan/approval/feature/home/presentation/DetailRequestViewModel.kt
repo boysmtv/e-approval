@@ -11,6 +11,8 @@ import dagger.hilt.android.lifecycle.HiltViewModel
 import id.co.ikonsultan.approval.core.common.base.BaseViewModel
 import id.co.ikonsultan.approval.core.common.coroutine.DispatcherProvider
 import id.co.ikonsultan.approval.feature.home.contract.*
+import id.co.ikonsultan.approval.feature.home.data.DetailRequestItem
+import id.co.ikonsultan.approval.feature.home.data.DetailRequestSlaItem
 import kotlinx.coroutines.flow.collect
 import javax.inject.Inject
 
@@ -43,9 +45,22 @@ class DetailRequestViewModel @Inject constructor(
     private fun loadData(id: String) {
         setState {
             copy(
-                ticketId = id,
-                reportType = "Finance - 003",
-                slaList = listOf("Maker", "Checker", "Signer")
+                requestItem = DetailRequestItem(
+                    ticketId = "Ticket $id",
+                    staffName = "Roy Khi Yho Shi",
+                    reportType = "Finance - 003",
+                    notes = "Budget approval Q1",
+                    fileName = "finance_report.pdf",
+                    status = "Approved",
+                    slaList = listOf(
+                        DetailRequestSlaItem("Maker", ""),
+                        DetailRequestSlaItem("Checker", ""),
+                        DetailRequestSlaItem("Signer", ""),
+                        DetailRequestSlaItem("Ngeker", ""),
+                        DetailRequestSlaItem("Naked", ""),
+                        DetailRequestSlaItem("Merengked", "")
+                    )
+                )
             )
         }
     }
